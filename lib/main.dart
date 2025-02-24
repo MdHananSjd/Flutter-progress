@@ -14,7 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.blue[300],
+        appBar: AppBar(
+          title: Text("My App Bar"),
+          backgroundColor: Colors.lightGreen,
+        ),
         body: Center(
           child: Container(
             height: 300,
@@ -23,18 +27,15 @@ class MyApp extends StatelessWidget {
               color: Colors.lightGreen,
               borderRadius: BorderRadius.circular(30),
             ),
-            padding: EdgeInsets.all(50),
-            child: Text(
-              "Hanan",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-                fontWeight: FontWeight.bold
-                ),
-              ),
-          ),
-        ),
-      ),
+            padding: EdgeInsets.all(25),
+            child: Icon(
+              Icons.favorite,
+              color: Colors.white,
+              size: 60,
+            ),
+          )
+        )
+      )
     );
   }
 }
