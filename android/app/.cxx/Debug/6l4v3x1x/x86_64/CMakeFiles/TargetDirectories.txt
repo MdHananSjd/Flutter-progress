@@ -1,0 +1,2 @@
+/Users/mhs/Development/projects/flutter/learningdart/android/app/.cxx/Debug/6l4v3x1x/x86_64/CMakeFiles/edit_cache.dir
+/Users/mhs/Development/projects/flutter/learningdart/android/app/.cxx/Debug/6l4v3x1x/x86_64/CMakeFiles/rebuild_cache.dir
