@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, must_be_immutable, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:learningdart/pages/first_page.dart';
 
 void main() {   //void is to specify that this function returns nothing
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,13 +14,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.blue[300],
-        appBar: AppBar(
+      home: FirstPage(),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+                                        USED CODES
+
+appBar: AppBar(
           title: Text("My App Bar"),
-          backgroundColor: Colors.lightGreen,
+         backgroundColor: Colors.lightGreen,
+          elevation: 50,
+          leading: Icon(Icons.menu),
+          actions: [
+            IconButton(onPressed:() {}, icon: Icon(Icons.logout)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.settings))
+          ],
         ),
-        body: Center(
+
+body: Center( //First body code
           child: Container(
             height: 300,
             width: 300,
@@ -35,7 +59,5 @@ class MyApp extends StatelessWidget {
             ),
           )
         )
-      )
-    );
-  }
-}
+
+*/ 
