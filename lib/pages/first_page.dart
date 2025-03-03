@@ -1,5 +1,7 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
-import 'package:learningdart/pages/second_page.dart';
+
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -12,14 +14,41 @@ class FirstPage extends StatelessWidget {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white
         ),
-      body: Center(
-        child: ElevatedButton(
-          child: Text("Go to the Second Page"),
-          style: ElevatedButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white),
-          onPressed: () {
-            //Navigate to the second page
-            Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage(),));
-          }
+      drawer: Drawer(
+        backgroundColor: Colors.deepPurple[100],
+        child: Column(
+          children: [
+            DrawerHeader(
+              child: Icon(
+                Icons.favorite,
+                size: 50,
+                )
+            ),
+            //Home option
+            ListTile(
+              title: Text('HOME'),
+              leading: Icon(Icons.home),
+              onTap: () {
+                //Popping the drawer first
+                Navigator.pop(context);
+                //When tapped, go to home page
+                Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+
+            // Settings option
+            ListTile(
+              title: Text('SETTINGS'),
+              leading: Icon(Icons.settings),
+              onTap: () {
+                //Popping the drawer first
+                Navigator.pop(context);
+                //when tapped, go to the settings page
+                Navigator.pushNamed(context, '/settingspage');
+              },
+            )
+
+          ]
         )
       ),
     );
